@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Button Page !</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+	<div id="ClassWrapper">
+		<form id="MainForm" action="RequestController.php" method="post">
+		    <fieldset>
+
+		        <div>
+		        	<label> Sélection de la Base de Données :</label>
+			    	<div class="labelInput">
+				    	<div><input type= "radio" name="BDD" value="GestformBDD"> GestformBDD</div>
+						<div><input type= "radio" name="BDD" value="Coptis"> Coptis</div>
+					</div>
+				</div>
+
+
+
+
+		        <div class="Champs">
+		        	<div class="ChampsCol">
+			        	<div class="Champ">
+				            <label>Table1 :</label>
+				            	<input type="text" name="Table1"/>
+				        </div>
+				  		<div class="Champ">
+				            <label>Table2 :</label>
+				            	<input type="text" name="Table2"/>
+				        </div>
+				        <div class="Champ">
+				            <label>Champ1 :</label>
+				            	<input type="text" name="Champ1"/>
+				        </div>
+				        <div class="Champ">
+				            <label>Champ2 :</label>
+				            	<input type="text" name="Champ2"/>
+				        </div>
+				        <div class="Champ">
+				            <label>Champ3 :</label>
+				            	<input type="text" name="Champ3"/>
+				        </div>
+				    </div>
+
+				    <div class="ChampsCol">
+				        <div class="Champ">
+				        	<label>Valeur 1 :</label>
+				            	<input type="text" name="Value1"/>
+				        </div>
+				        <div class="Champ">
+				            <label>Valeur 2 :</label>
+				            	<input type="text" name="Value2"/>
+				        </div>
+				        <div class="Champ">
+				            <label>Valeur 3 :</label>
+				            	<input type="text" name="Value3"/>
+				        </div>
+				        <div class="Champ">
+				            <label> SQL Pur :</label>
+				            <textarea name="ManualQueryText" id="ManualQueryText" form="MainForm"></textarea>
+				        </div>
+				    </div>
+		        </div>
+
+
+		        <div class="QuerriesButtons">
+			        <div class="ButtonGroup" id="SelectQueries">
+			            <label>REQUÊTES "SELECT" : </label>
+			            <div class="labelInput">
+			            	<input type="submit" name="SELECTALL" value="SELECTALL" />
+			            	<input type="submit" name="SELECTWhereSimple" value="SELECTWhereSimple" />
+			            </div>
+			        </div>
+
+
+
+
+			        <div class="ButtonGroup" id="ListQueries">
+			           	<label> REQUETES "LISTE" :</label>
+			           	<div class="labelInput">
+			           		<input type="submit" name="FieldAppearence" value="FieldAppearence" />
+			            	<input type="submit" name="CountDifferentValues" value="CountDifferentValues" />
+			            	<input type="submit" name="CompareTwoFields" value="CompareTwoFields" />
+			            	<input type="submit" name="LinksOfTable" value="LinksOfTable" />
+			            </div>
+			        </div>
+
+			        <div class="ButtonGroup" id="OtherQueries">
+			           	<label> REQUETES AUTRES :</label>
+			           	<div class="labelInput">
+			           		<input type="submit" name="FullManualQuery" value="FullManualQuery"/>
+			            </div>
+			        </div>
+			    </div>
+
+
+		        <div id="Selectors">
+			        <div id="SmallSelector">
+			        	<label>Opérateur du WHERE :</label>	
+						<div><input type= "radio" name="WhereOperator" value="Equal"> = </div>
+						<div><input type= "radio" name="WhereOperator" value="NotEqual"> != </div>
+						<div><input type= "radio" name="WhereOperator" value="LIKE"> %LIKE%</div>
+						<div><input type= "radio" name="WhereOperator" value="ISNULL">IS NULL</div>
+			        </div>
+			        </br>
+					<div id="SmallSelector">
+		        		<label>Options d'affichage :</label>        
+			        	<div><input type="checkbox" name="Options[]" value="NoCellFusion"> Pas de Fusion de Cellules</div>
+					    <div><input type="checkbox" name="Options[]" value="NoImagePrompt"> Pas d'affichage des images</div>
+					    <div><input type="checkbox" name="Options[]" value="NoColumnHead"> Pas d'entête de colonne</div>
+					    <div><input type="checkbox" name="Options[]" value="NoHTMLInsertion"> Pas d'insertion HTML</div>
+					    <div class="checkboxAndTextInput">
+						    <div><input type="checkbox" name="Options[]" value="ColumnOrderCheckBox"> Ordre des Colonnes modifié :</div>
+						    <div><input type="text" name="ColumnOrder" value="2, 4, 3, 1..."></div>
+					    </div>
+			        </div>
+		        </div>
+
+
+		    </fieldset>
+		</form>
+	</div>
+</body>
+</html>
